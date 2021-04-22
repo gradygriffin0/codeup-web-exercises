@@ -168,28 +168,52 @@ console.log(calculateTotal(randomLuckyNumber, randomBill));
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-    function numberChecker(){
-        var number = prompt("What is your number?");
-    function numberTest() {
-        var playCheck = confirm("Want to play the number test?");
-        if (playCheck) {
-            var number = (prompt("Enter a number."));
-                }
+
+    function numberChecker() {
+        let numberToCheck = parseInt(prompt("What is your number?") , 10);
+        while(isNaN(numberToCheck)) {
+            alert("Hey! That's not a number!");
+            let numberToCheck = parseInt(prompt("Now.. what is your number?"));
+            if (isNaN(numberToCheck) === false) {
+                return numberToCheck;
             }
-                if (number % 2 === 0) {
-                    alert("Your number is even.");
-                } else {
-                    alert("Your number is odd.");
-                }
-                alert("Your number plus 100 is: " + (number + 100));
-                if (number > 0) {
-                    alert("Your number is positive.");
-                } else if (number < 0) {
-                    alert("Your number is negative.");
-                } else {
-                    alert("Your number is not positive or negative because it is 0.");
-                }
+        } return numberToCheck;
+    }
+    function oddChecker(number) {
+        if (number % 2 === 0) {
+            alert("Your number is even.");
+        } else {
+            alert("Your number is odd.");
         }
     }
+    function add100(number) {
+        alert("Your number plus 100 is: " + (number + 100));
+    }
+    function signChecker(number){
+        if (number > 0) {
+            alert("Your number is positive.");
+        } else if (number < 0) {
+            alert("Your number is negative.");
+        } else {
+            alert("Your number is not positive or negative because it is 0.");
+        }
+    }
+        function numberTest() {
+            var playCheck = confirm("Want to play the number test?");
+            if (playCheck) {
+                    let number = numberChecker();
 
+                    oddChecker(number);
+
+                    add100(number);
+
+                    signChecker(number);
+
+                    alert("Thanks for playing!");
+            } else {
+                    alert("Okay.... bye.");
+
+                    window.close();
+            }
+        }
 console.log(numberTest());
