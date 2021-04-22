@@ -18,3 +18,24 @@
 // }
 
 
+// DO WHILE
+
+    // do {
+    //     // executes code
+    // } while (condition) // does something then checks condition then does it again until condition fails.
+
+
+        // var numStudents = 0;
+        // do {
+        //     console.log(`we have ${20-numStudents} desks remaining`);
+        //     numStudents++;
+        // }while(numStudents <= 20);
+        // console.log("Sorry class is full...");
+
+
+        // var age = 1;
+        // do {
+        //     console.log(`Happy birthday you are now ${age} years old.`);
+        //     age++;
+        // }while (age < 16);
+        // console.log(`Happy birthday. Enjoy your ${age}th birthday. Here's a car.`);
