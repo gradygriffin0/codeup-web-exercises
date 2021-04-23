@@ -34,11 +34,120 @@
 //  write a do-while loop that prints the spaces available. If the parking lot gets filled, print "this parking lot
 //  is now full" to the console.
 // // HINT: think of a countdown, remember if statements can be used inside of your statement
-var cars = 0;
-do {
-    console.log(`Parking Lots available: ${30 - cars}`);
-    cars += 2;
-    console.log("-------------------------");
-    console.log(`${cars} parking lots have now been filled`);
-}while(cars<30);
-console.log("Parking lot is now filled");
+// var cars = 0;
+// do {
+//     console.log(`Parking Lots available: ${30 - cars}`);
+//     cars += 2;
+//     console.log("-------------------------");
+//     console.log(`${cars} parking lots have now been filled`);
+// }while(cars<30);
+// console.log("Parking lot is now filled");
+
+// TODO: Loop through a set of numbers (0-30), if the number you're currently at is even, add 2 to it. If it's an
+//  odd number, print "odd"
+// // HINT: remember the remainder operator (modulo)
+// let oddOrEven30 = function(){
+//     for(let i = 0; i <= 30; i++){
+//         console.log(`Current iteration: ${i}`);
+//         if (i % 2 === 0){
+//             console.log(i+2);
+//         } else {
+//             console.log(`${i} ODD`);
+//         }
+//     }
+// }
+// oddOrEven30();
+
+// // TODO: loop through numbers 1 - 40. Print "marco" if it's divisible by 3. Print "polo" if it's divisible by 5.
+//  If it's neither print "I'm not playing"
+//  Print "marco polo" if it's divisible by 3 and 5.
+    // let divisibleCheck = function(i){
+    //     console.log("<---------------->");
+    //     console.log("Iteration " + i);
+    //     if(( i % 3 === 0) && (i % 5 === 0)){
+    //         console.log("Marco Polo!");
+    //     } else if(i % 5 === 0){
+    //         console.log("Polo");
+    //     } else if (i % 3 === 0){
+    //         console.log("Marco");
+    //     } else {
+    //         console.log("I'm not playing!");
+    //     }
+    // }
+    // let playMarcoPolo = function(start, end) {
+    //     for (var i = start; i <= end; i++) {
+    //         divisibleCheck(i);
+    //     }
+    // }
+    //
+    // playMarcoPolo(1, 40);
+
+// For Exercises
+        // let showMultiplicationTable = function(number){
+        //     for(let i = 0; i <= 10; i++){
+        //         console.log(`${number} x ${i} = ${number*i}`);
+        //     }
+        // }
+        // showMultiplicationTable(7);
+
+// let tenRandomCheck = function(){
+//     for (let i = 1; i<= 10; i++){
+//         var number = Math.floor(Math.random() * 180 + 1) + 20;
+//         if (number % 2 === 0){
+//             console.log(`${i}: ${number} is even`);
+//         } else {
+//             console.log(`${i}: ${number} is odd`);
+//         }
+//
+//     }
+// }
+// tenRandomCheck();
+
+    // let numberPyramid = function(start, end){
+    //     for(let i = start; i <= end; i++) {
+    //         var x = String(i);
+    //         x = x.repeat(i);
+    //         console.log(x);
+    //     }
+    //
+    // }
+    // numberPyramid(1,9);
+
+// for (let i = 100; i>0 ; i-=5)
+//     console.log(i);
+
+// do{
+// var userNumber = (prompt("Enter an odd number between 0 and 50"));
+// userNumber = Number(userNumber);
+// if ((userNumber % 2 === 1) && (isNaN(userNumber) === false) && (userNumber <= 50) && (userNumber >= 0)){
+//     break;
+// }
+//
+// } while(1 === 1);
+//
+// console.log(userNumber);
+//
+// for (let i = 0; i <= 50; i++){
+//     if(i === userNumber){
+//         console.log(`${i} is your favorite number? skipped!`);
+//         continue;
+//     }
+//     else if (i % 2 === 1){
+//         console.log(`Odd Number is ${i}`)
+//         continue;
+//     }
+// }
+
+function median(input){
+    let length = input.length
+    if (length % 2 === 0){
+        let halfPoint = input.length / 2;
+        return((input[halfPoint] + input[halfPoint-1])/2);
+    } else {
+        var halfPPoint = (input.length + 1) / 2
+         return (input[halfPPoint-1]);
+    }
+}
+median([1,5,6]);
+var array = [1,5,6];
+console.log(array[2]);

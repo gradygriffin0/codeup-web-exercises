@@ -62,3 +62,20 @@
     //     console.log("hello world" + i);
     // }
 
+// function innerLoop(x,y) {
+//     for(let i = y; i >= x; i--){
+//         console.log(i);
+//     }
+// }
+// function outerLoop(x,y){
+//     for (let i = x; i <= y; i++) {
+//         console.log(i);
+//         if (i === y) {
+//             innerLoop(x,y);
+//         }
+//     }
+// }
+//
+// outerLoop(1 , 100);
+//
+//
