@@ -27,20 +27,26 @@
     //     console.log("Yay I sold all the cones.");
     // }
 var allCones = Math.floor(Math.random() * 50) + 50;
-console.log(allCones);
+console.log(`I have ${allCones} cones`);
+var totalSold = 0;
 const coneMath = function(cones) {
     do {
+
         var random = (Math.floor(Math.random() * 5) + 1);
         console.log("------NEW CUSTOMER------");
         console.log(`The customer wants: ${random} cones.`);
+        totalSold += random;
         console.log("------------------------");
         if (random > cones) {
             console.log(`Cannot sell you ${random} because I only have ${cones}`)
             continue;
         }
         console.log(`${random} cones sold, I have ${cones - random} cones remaining`);
+        console.log(`I have sold ${totalSold} total.`);
         cones -= random;
         console.log(cones);
+
+
     } while (cones > 0);
 
     console.log("!!! I sold all my cones !!!");
