@@ -39,3 +39,26 @@
         //     age++;
         // }while (age < 16);
         // console.log(`Happy birthday. Enjoy your ${age}th birthday. Here's a car.`);
+
+
+
+
+
+// the difference between while and do while is that the do-while will run first and check a condition second,
+// and the while loop will check a condition first and then running second.
+
+
+
+
+
+// FOR LOOP
+
+    // for(var i = 0; i <= 10; i++){
+    //     // code to be executed.
+    //     console.log("hello world" + i);
+    // }
+    // for(var i = 10; i >= 0; i -= 2){
+    //     // code to be executed.
+    //     console.log("hello world" + i);
+    // }
+
