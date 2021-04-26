@@ -56,6 +56,7 @@ function second(input){
     return input[1];
     }
 function last(input){
+    arr.reduce(input);
     return input[input.length - 1];
     }
 
@@ -64,4 +65,5 @@ function last(input){
     console.log(last([1, 2, 3, 4, 5]));
 
 })();
+
 
