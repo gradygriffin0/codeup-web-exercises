@@ -83,12 +83,12 @@
     // playMarcoPolo(1, 40);
 
 // For Exercises
-        // let showMultiplicationTable = function(number){
-        //     for(let i = 0; i <= 10; i++){
-        //         console.log(`${number} x ${i} = ${number*i}`);
-        //     }
-        // }
-        // showMultiplicationTable(7);
+//         let showMultiplicationTable = function(number){
+//              for(let i = 0; i <= 10; i++){
+//                 console.log(`${number} x ${i} = ${number*i}`);
+//             }
+//         }
+//         showMultiplicationTable(7);
 
 // let tenRandomCheck = function(){
 //     for (let i = 1; i<= 10; i++){
@@ -102,16 +102,16 @@
 //     }
 // }
 // tenRandomCheck();
-
-    // let numberPyramid = function(start, end){
-    //     for(let i = start; i <= end; i++) {
-    //         var x = String(i);
-    //         x = x.repeat(i);
-    //         console.log(x);
-    //     }
-    //
-    // }
-    // numberPyramid(1,9);
+//
+//     let numberPyramid = function(start, end){
+//         for(let i = start; i <= end; i++) {
+//             var x = String(i);
+//             x = x.repeat(i);
+//             console.log(x);
+//         }
+//
+//     }
+//     numberPyramid(0,9);
 
 // for (let i = 100; i>0 ; i-=5)
 //     console.log(i);
@@ -137,17 +137,3 @@
 //         continue;
 //     }
 // }
-
-function median(input){
-    let length = input.length
-    if (length % 2 === 0){
-        let halfPoint = input.length / 2;
-        return((input[halfPoint] + input[halfPoint-1])/2);
-    } else {
-        var halfPPoint = (input.length + 1) / 2
-         return (input[halfPPoint-1]);
-    }
-}
-median([1,5,6]);
-var array = [1,5,6];
-console.log(array[2]);
