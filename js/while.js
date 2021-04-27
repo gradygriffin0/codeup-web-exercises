@@ -53,13 +53,28 @@
     // }
     // coneMath(allCones);
 
-function onlyOddNumbers(input){
-    let odd = [];
-    for(let i = 0; i < input.length; i++){
-        if(input[i] % 2 === 1){
-            odd += input;
-            console.log(odd)
+// function onlyOddNumbers(input){
+//     let odd = [];
+//     let min = Math.min.apply(null,input);
+//     for (let i = 0; i < input.length; i++){
+//         console.log(i);
+//         if(Math.abs(input[i]) % 2 === 1 ){
+//             odd.push(input[i]);
+//         }
+//     }
+//     console.log(odd);
+// }
+//
+// console.log([1, 2, 3]);
+// onlyOddNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]);
+function onlyPositiveNumbers(input){
+    var pos = [];
+    for (let i = 0; i < input.length; i++){
+        if (input[i] > 0){
+            pos.push(input[i]);
         }
     }
+    return pos;
 }
-onlyOddNumbers();
+
+console.log(onlyPositiveNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]));
