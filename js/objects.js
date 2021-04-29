@@ -82,8 +82,42 @@ var shoppers = [
  * > console.log(books[0].author.lastName) // "Adams"
  */
 var books = [
-    {name: "Zero to One"}
-]
+    {
+        name: "Zero to One",
+        author: {
+            authorFirst: "Peter",
+            authorLast: "Thiel"
+        }
+    },
+    {
+        name: "How to Win Friends and Influence People",
+        author: {
+            authorFirst: "Dale",
+            authorLast: "Carnegie"
+        }
+    },
+    {
+        name: "Mindset: The New Psychology of Success",
+        author: {
+            authorFirst: "Carol",
+            authorLast: "Dweck"
+        }
+    },
+    {
+        name: "Wisdom from Rich Dad, Poor Dad",
+        author: {
+            authorFirst: "Robert",
+            authorLast: "Kiyosaki"
+        }
+    },
+    {
+        name: "You Are a Badass",
+        author: {
+            authorFirst: "Jen",
+            authorLast: "Sincero"
+        }
+    }
+];
 
 /**
  * TODO:
@@ -109,7 +143,15 @@ var books = [
  *      ---
  *      ...
  */
-
+// function bookPreview(){
+//     for (let i = 0; i < books.length; i++){
+//         console.log(`Book #${[i+1]}`);
+//         console.log(`Title: ${books[i].name}`);
+//         console.log(`Author: ${books[i].author.authorFirst} ${books[i].author.authorLast}`)
+//         console.log("------------------------")
+//     }
+// }
+// bookPreview();
 /**
  * Bonus:
  * - Create a function named `createBook` that accepts a title and author
@@ -120,4 +162,57 @@ var books = [
  *   outputs the information described above. Refactor your loop to use your
  *   `showBookInfo` function.
  */
+function createBook(title, author){
+    var firstLast = author.split(" ", 2);
+    var newBook = {
+        name: title,
+        author: {
+            authorFirst: firstLast[0],
+            authorLast: firstLast[1]
+        }
+    }
+    books.push(newBook);
+    return newBook;
+}
+    function bookPreview(bookName) {
+    var bookCheck;
+        if(!!bookName || typeof bookName === 'string') {
+            for (let i = 0; i < books.length; i++){
+                if (bookName.toLowerCase() === books[i].name.toLowerCase()){
+                    bookCheck = true;
+                    if (bookCheck){
+                        console.log(`We Have ${books[i].name}, here is a preview:`);
+                        console.log("------------------------");
+                        console.log(`Book #${[i+1]}`);
+                        console.log(`Title: ${books[i].name}`);
+                        console.log(`Author: ${books[i].author.authorFirst} ${books[i].author.authorLast}`);
+                        console.log("------------------------");
+                        return;
+                    } else {
+                        console.log("I couldn't find " + bookName);
+                        console.log("Here are our books:");
+                    }
+                }
+            }
+        }
+
+        for (let i = 0; i < books.length; i++){
+            console.log(`Book #${[i+1]}`);
+            console.log(`Title: ${books[i].name}`);
+            console.log(`Author: ${books[i].author.authorFirst} ${books[i].author.authorLast}`)
+            console.log("------------------------")
+        }
+    }
+    // bookPreview("you are a badass");
+
+    // bookPreview();
+
+    bookPreview("Grady's Book");
+
+    createBook("Grady's Book", "Grady Griffin");
+
+    bookPreview("Grady's Book");
+
+
+
 })();

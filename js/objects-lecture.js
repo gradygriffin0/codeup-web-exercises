@@ -171,8 +171,9 @@ var zoo = {
     isOpen: false,
     ranking: -Infinity,
     yearOpened: 2021,
-    animals: [{
-        giraffes: {
+    animals: [
+
+         {  name: "giraffe",
             isTall: true,
             isMammal: true,
             canFly: false,
@@ -181,7 +182,7 @@ var zoo = {
                 return this.sound;
             }
         },
-        Doge: {
+        {   name: "Doge",
             isMeme: true,
             isMammal: true,
             canFly: false,
@@ -190,7 +191,7 @@ var zoo = {
                 return this.sound;
             }
         },
-        Penguin: {
+         {  name: "Penguin",
             isCold: true,
             isMammal: false,
             canFly: false,
@@ -199,7 +200,7 @@ var zoo = {
                 return this.sound;
             }
         },
-        Monke: {
+         {  name: "Monke",
             isMeme: true,
             isMammal: true,
             canFly: false,
@@ -208,7 +209,7 @@ var zoo = {
                 return this.sound;
             }
         },
-        TREX: {
+         {  name: "TREX",
             isTall: true,
             isMammal: false,
             canFly: false,
@@ -216,7 +217,13 @@ var zoo = {
             animalSound: function () {
                 return this.sound;
             }
-        }
-    }]
+        },
+    ]
 };
-console.log(zoo.animals[1]);
+console.log(`Welcome to ${zoo.name}`);
+
+for (let i = 0; i < zoo.animals.length; i++){
+
+
+    console.log(`This is a ${zoo.animals[i].name}, *The ${zoo.animals[i].name} "${zoo.animals[i].animalSound()}s" at you*`);
+}
