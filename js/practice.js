@@ -75,3 +75,5 @@ function minTime(files, numCores, limit) {
 }
 
 minTime([2, 4, 8, 16, 16], 4, 2);
+
+console.log(minTime([2, 4, 8, 16], 4, 1));
