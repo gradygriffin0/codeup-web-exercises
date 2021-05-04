@@ -1,0 +1,15 @@
+.fancyHeader {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: underline;
+}
+
+body {
+    background-color: grey;
+    background-image: url("../img/Chevron_300x300.png"), none;
+    background-image-color: transparent;
+}

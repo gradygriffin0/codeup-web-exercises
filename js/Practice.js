@@ -22,15 +22,29 @@
 //
 // console.log(Math.min([5,4,3,2,1]))
 
-function trim(input){
-    if (typeof input === "string")
-        return input.trim();
-    else {
-        return "Error";
-    }
+// function trim(input){
+//     if (typeof input === "string")
+//         return input.trim();
+//     else {
+//         return "Error";
+//     }
+//
+// }
+//
+// console.log(trim(3));
+// console.log(trim(" asd asdf "));
+// console.log(trim("             a              b             "))
 
+function cube(num){
+    return Math.pow(num,3);
 }
 
-console.log(trim(3));
-console.log(trim(" asd asdf "));
-console.log(trim("             a              b             "))
+console.log(cube(3));
+
+function cubeRoot(num){
+    return Math.pow(num, (1/3));
+}
+
+console.log(cubeRoot(27));
+console.log(cube(6));
+console.log(cubeRoot(cube(6)));
