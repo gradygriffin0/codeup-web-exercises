@@ -35,16 +35,31 @@
 // console.log(trim(" asd asdf "));
 // console.log(trim("             a              b             "))
 
-function cube(num){
-    return Math.pow(num,3);
-}
+//May 4
+// Write a function cube that cubes a number, write a function cubeRoot that takes the cube root of a number.
 
-console.log(cube(3));
+// function cube(num){
+//     return Math.pow(num,3);
+// }
+//
+// console.log(cube(3));
+//
+// function cubeRoot(num){
+//     return Math.pow(num, (1/3));
+// }
+//
+// console.log(cubeRoot(27));
+// console.log(cube(6));
+// console.log(cubeRoot(cube(6)));
 
-function cubeRoot(num){
-    return Math.pow(num, (1/3));
-}
 
-console.log(cubeRoot(27));
-console.log(cube(6));
-console.log(cubeRoot(cube(6)));
+
+//May 5
+// Write a function called last(input) that returns the last character of a string
+
+// function last(input){
+//     return input[input.length - 1];
+// }
+//
+// console.log(last("Hello, World"));
+// console.log(last("many characters but which one is last?"));

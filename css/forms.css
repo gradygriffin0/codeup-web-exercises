@@ -1,0 +1,14 @@
+#formDad{
+    width: 500px;
+    height: 750px;
+    margin: auto;
+    position: center;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: lightblue;
+    text-align: center;
+}
+div {
+    padding: 10px;
+    border: 1px solid black;
+}

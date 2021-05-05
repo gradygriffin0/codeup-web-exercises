@@ -9,6 +9,7 @@
     position: relative;
     align-content: center;
     margin: auto;
+    font-family: 'Playfair Display', serif;
 }
 
 h2, h3, h4, h5, h6 {
@@ -22,7 +23,7 @@ h2, h3, h4, h5, h6 {
     height: 25px;
     position: relative;
     align-content: center;
-
+    font-family: 'Playfair Display', serif;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
     background-image: url("../img/Chevron_300x300.png"), none;
     background-repeat: space;
     background-size: 50px;
+    font-family: 'Playfair Display', serif;
 
 }
 

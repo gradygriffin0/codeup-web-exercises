@@ -3,40 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <title>Register With Us</title>
+        <link rel="stylesheet" href="css/forms.css">
     </head>
     <body>
-        <h2>Register</h2>
+
+        <section id="formDad">
+            <h2>Register</h2>
         <form method="POST" action="https://www.elformo.com/forms/38ee3d34-308d-451b-93a9-3091ef6f82ff">
-            <input style="height: 30px; width: 225px" id="email" name="email" type="email" placeholder="Email" required>
-            <br>
-            <input style="height: 30px; width: 225px" id="password" name="password" type="password" placeholder="Password" required>
-            <br>
-            <textarea style="height: 150px; width: 450px" id="bio" name="bio" placeholder="Enter a Short Description of Yourself"> </textarea>
-            <br>
             <section>
-            <h4>How did you hear about us?</h4>
-            <input id="q1" type="radio" name="advertQuestion1" value="billboard">
-            <label for="q1"> Billboard </label><br>
-            <input id="q2" type="radio" name="advertQuestion1" value="radioAdvertisement">
-            <label for="q2">Radio Advertisement</label><br>
-            <input id="q3" type="radio" name="advertQuestion1" value="internetAdvertisement">
-            <label for="q3">Internet Advertisement</label><br>
-            <input id="q4" type="radio" name="advertQuestion1" value="other">
-            <label for="q4">Other</label><br>
+            <div><input style="height: 30px; width: 225px" id="email" name="email" type="email" placeholder="Email"
+                        required>
+                <br>
+            </div>
+            <div>
+                <input style="height: 30px; width: 225px" id="password" name="password" type="password"
+                       placeholder="Password" required>
+                <br></div>
+            <div>
+                <textarea style="height: 150px; width: 450px" id="bio" name="bio"
+                          placeholder="Enter a Short Description of Yourself"> </textarea>
+                <br>
+            </div>
+            </section>
+            <section>
+                <h4>How did you hear about us?</h4>
+                <input id="q1" type="radio" name="advertQuestion1" value="billboard">
+                <label for="q1"> Billboard </label><br>
+                <input id="q2" type="radio" name="advertQuestion1" value="radioAdvertisement">
+                <label for="q2">Radio Advertisement</label><br>
+                <input id="q3" type="radio" name="advertQuestion1" value="internetAdvertisement">
+                <label for="q3">Internet Advertisement</label><br>
+                <input id="q4" type="radio" name="advertQuestion1" value="other">
+                <label for="q4">Other</label><br>
             </section>
             <br>
-            <h4>What browser are you using?</h4>
-            <select name="browserQuestion">
-                <option value="chrome">Chrome</option>
-                <option value="firefox">Firefox</option>
-                <option value="linux">Linux</option>
-                <option value="other">Other</option>
-            </select>
+            <div>
+                <h4>What browser are you using?</h4>
+                <select name="browserQuestion">
+                    <option value="chrome">Chrome</option>
+                    <option value="firefox">Firefox</option>
+                    <option value="linux">Linux</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
             <br>
 
 
             <input type="submit">
 
         </form>
+        </section>
     </body>
 </html>
