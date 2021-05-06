@@ -109,7 +109,7 @@ nav ul li {
 
 .media {
     background-color: var(--light-bg);
-    width: 100%
+    width: 100%;
     border: 1px var(--separator-color);
     padding: .5em;
     overflow: auto;
