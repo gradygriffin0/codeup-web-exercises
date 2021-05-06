@@ -63,3 +63,26 @@
 //
 // console.log(last("Hello, World"));
 // console.log(last("many characters but which one is last?"));
+
+
+//May 6
+//Write a remainder(number, divisor) function that returns the remainder left over when dividing number by the divisor
+//If either of the arguments are not a numeric string or number, return a string message indicating which argument is not a number/numeric string
+
+function remainder(num, divisor){
+    if (typeof num === "string" || typeof num === "number") {
+        if (typeof divisor === "string" || typeof divisor === "number"){
+            return (num % divisor);
+        } else {
+            return "Error Divisor NaN";
+        }
+    } else {
+        return "Error Number NaN";
+    }
+
+}
+
+console.log(remainder("101", 2));
+console.log(remainder("101010100", 2));
+console.log(remainder(2, ));
+console.log(remainder());
