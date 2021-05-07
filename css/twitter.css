@@ -87,20 +87,23 @@ nav ul li {
 
 .profile-details{
     width: calc(25% - .5em);
-    float: left;
-    margin: 0 .5em;
+    position: absolute;
+    left: 0;
+    margin: 0 1em;
 }
 .timeline {
     width: calc(50% - .5em);
-    float: left;
+    position: absolute;
     margin: 0 .5em;
+    left: 23.5%;
 
 }
 
 .who-to-follow {
     width: calc(25% - .5em);
-    float: left;
+    position: absolute;
     margin: 0 .5em;
+    right: 0;
 }
 
 .container {
@@ -110,7 +113,7 @@ nav ul li {
 .media {
     background-color: var(--light-bg);
     width: 100%;
-    border: 1px var(--separator-color);
+    border-bottom: 1px solid var(--separator-color);
     padding: .5em;
     overflow: auto;
 }
@@ -123,14 +126,22 @@ nav ul li {
 
 .media-body {
     width: calc(100% - 50px);
+    display: inline-block;
 
 }
 
 .profile-items {
     list-style: none;
     padding: 0;
+
 }
 
 .profile-entry {
     margin: .5em;
+}
+
+.profile-form {
+    position: absolute;
+    right: 0;
+    top: 18.25em;
 }
