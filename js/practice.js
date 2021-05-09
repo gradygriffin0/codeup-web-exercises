@@ -39,6 +39,39 @@
 // aVeryBigSum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005]);
 
 function minTime(files, numCores, limit) {
+    let testCase = [];
+    let sum = 0;
+    let limitCounter = 0;
+    for (let i = 0; i < files.length; i++) {
+        if (files[i] % numCores === 0) {
+            testCase.unshift(files[i]);
+        }
+
+    }
+    testCase.sort(function (a, b) {
+        return b - a;
+    });
+    files.sort(function(a, b) {
+        return b - a;
+    });
+
+    for (let j = 0; j < files.length; j++) {
+        if ((files[j] === testCase[limitCounter]) && (limitCounter < limit)) {
+
+            sum += (files[j] / numCores);
+
+            ++limitCounter;
 
 
+            continue;
+
+        } else {
+
+            sum += files[j];
+        }
+
+    }
+    return sum;
 }
+
+minTime([2, 4, 8, 16, 16], 4, 2);
