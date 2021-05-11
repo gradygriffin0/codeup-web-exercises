@@ -1,9 +1,26 @@
 @media screen and (min-width: 350px) {
+    .hidden-on-desktop {
+        background-color: aqua;
+        display: flex;
+        flex-flow: column nowrap;
+        width: 95%;
+        min-height: 60px;
+        padding: 25px 5px;
+        margin: 25px auto;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border: 5px solid silver;
+        font-family: Verdana;
+        font-size: 40px;
+
+    }
+
     nav li a {
         display: flex;
         flex-flow: column nowrap;
         width: 100%;
-        min-height: 34px;
+        min-height: 60px;
         padding: 25px 5px;
         margin: 25px auto;
         background-color: lightgray;
@@ -11,6 +28,9 @@
         align-items: center;
         position: relative;
         right: 25px;
+        font-size: 45px;
+        font-family: Verdana;
+
     }
 
     nav li {
