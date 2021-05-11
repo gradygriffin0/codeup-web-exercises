@@ -1,0 +1,27 @@
+@media screen and (min-width: 350px) {
+    nav li a {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        min-height: 34px;
+        padding: 25px 5px;
+        margin: 25px auto;
+        background-color: lightgray;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 25px;
+    }
+
+    nav li {
+        list-style:none ;
+        width: 100%;
+    }
+
+    h1 {
+        width: fit-content;
+        margin-left: 28%;
+        font-size: 100px;
+    }
+
+}
