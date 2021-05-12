@@ -1,4 +1,4 @@
-@media screen and (min-width: 350px) {
+@media screen and (max-width: 550px) {
     .hidden-on-desktop {
         background-color: aqua;
         display: flex;
@@ -13,9 +13,7 @@
         border: 5px solid silver;
         font-family: Verdana;
         font-size: 40px;
-
     }
-
     nav li a {
         display: flex;
         flex-flow: column nowrap;
@@ -30,18 +28,28 @@
         right: 25px;
         font-size: 45px;
         font-family: Verdana;
-
     }
-
     nav li {
         list-style:none ;
         width: 100%;
     }
-
     h1 {
         width: fit-content;
         margin-left: 28%;
         font-size: 100px;
     }
+    .header-img img {
+        width: 96%;
+        padding: 20px;
+    }
+    h2 {
+        font-family: Verdana;
+        font-size: 50px;
+    }
+    p {
+        font-size: 34px;
+        font-family: Verdana;
+    }
+
 
 }
