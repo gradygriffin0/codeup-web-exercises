@@ -1,0 +1,15 @@
+.jumbotron {
+    width: 90%;
+    margin: auto;
+    padding: 4rem 0;
+    background-image: url("../assets/img/pizza.png");
+}
+
+h1 {
+    text-align: center;
+
+}
+
+h1.bg-light {
+    opacity: 0.5;
+}

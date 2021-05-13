@@ -28,7 +28,7 @@ h2, h3, h4, h5, h6 {
 
 body {
     background-color: dimgrey;
-    background-image: url("../img/Chevron_300x300.png"), none;
+    background-image: url("../assets/img/Chevron_300x300.png"), none;
     background-repeat: space;
     background-size: 50px;
     font-family: 'Playfair Display', serif;

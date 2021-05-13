@@ -109,8 +109,10 @@
 // * * * * *
 
  function pyramidNumber(num) {
-    var number = '';
-    for (let i = 0; i <= num; i++){
-        console.log(number += i)
+    var empty = '';
+    for (let i = 0; i < num; i++){
+        console.log(empty += '*')
     }
 }
+
+pyramidNumber(10);
