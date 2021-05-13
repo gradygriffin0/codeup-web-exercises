@@ -13,3 +13,7 @@ h1 {
 h1.bg-light {
     opacity: 0.5;
 }
+
+h2 {
+    margin-top: 1.5em;
+}
