@@ -23,3 +23,7 @@ h2 {
     margin: auto;
 }
 
+button>img {
+    width: 27%;
+    padding-left: 10px;
+}

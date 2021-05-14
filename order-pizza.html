@@ -163,22 +163,60 @@
                     </div>
                     <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
                         <div class="card"> <!-- first card third panel -->
-                            <div class="card-header">Toppings</div>
-                            <div class="form-check">
+                            <div class="card-header text-white bg-primary">Toppings</div>
+                            <div class="card mx-5 mt-4 mb-4">
+                                <div class="card-header">Choose Meats</div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <input type="checkbox" class="form-check-input ml-1" value="beef"
+                                                   id="beefCheck">
+                                            <label for="beefCheck" class="form-check-label ml-4">Beef</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" class="form-check-input ml-1" value="ham"
+                                                   id="hamCheck">
+                                            <label for="hamCheck" class="form-check-label ml-4">Ham</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" class="form-check-input ml-1" value="philly"
+                                                   id="phillyCheck">
+                                            <label for="phillyCheck" class="form-check-label ml-4">Philly Steak</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="checkbox" class="form-check-input ml-1" value="bacon"
+                                                   id="baconCheck">
+                                            <label for="baconCheck" class="form-check-label ml-4">Bacon</label>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="card mx-5 mb-4">
+                                <div class="card-header">Choose Veggies</div>
                                 <ul class="list-group">
                                     <li class="list-group-item">
-                                        <input type="checkbox" class="form-check-input ml-1" value="beef" id="beefCheck">
-                                        <label for="beefCheck" class="form-check-label ml-4">Beef</label>
+                                        <input type="checkbox" class="form-check-input ml-1" value="greenPepper"
+                                               id="greenPepperCheck">
+                                        <label for="greenPepperCheck" class="form-check-label ml-4">Green Peppers</label>
                                     </li>
                                     <li class="list-group-item">
-                                        <input type="checkbox" class="form-check-input ml-1" value="ham" id="hamCheck">
-                                        <label for="hamCheck" class="form-check-label ml-4">Ham</label>
+                                        <input type="checkbox" class="form-check-input ml-1" value="mushroom"
+                                               id="mushroomCheck">
+                                        <label for="mushroomCheck" class="form-check-label ml-4">Mushrooms</label>
                                     </li>
                                     <li class="list-group-item">
-
+                                        <input type="checkbox" class="form-check-input ml-1" value="onion"
+                                               id="onionCheck">
+                                        <label for="onionCheck" class="form-check-label ml-4">Onions</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input type="checkbox" class="form-check-input ml-1" value="jalapeno"
+                                               id="jalapenoCheck">
+                                        <label for="jalapenoCheck" class="form-check-label ml-4">Jalapeño Peppers</label>
                                     </li>
                                 </ul>
                             </div>
+                                <div class="card-footer d-flex flex-row align-items-center justify-content-end">
+                                    <button class="btn btn-primary align-self-end">Checkout <img src="assets/img/icons8-shopping-cart-50.png" alt=""></button>
+                                </div>
                         </div>
                     </div>
                     <footer>
