@@ -17,3 +17,9 @@ h1.bg-light {
 h2 {
     margin-top: 1.5em;
 }
+
+.card .card {
+    width: 95%;
+    margin: auto;
+}
+

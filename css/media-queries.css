@@ -1,55 +1,88 @@
 @media screen and (max-width: 550px) {
-    .hidden-on-desktop {
-        background-color: aqua;
+    body {
+        width: 100%;
+        padding: 0;
+        margin: 0;
         display: flex;
         flex-flow: column nowrap;
-        width: 95%;
-        min-height: 60px;
-        padding: 25px 5px;
-        margin: 25px auto;
         justify-content: center;
         align-items: center;
-        position: relative;
-        border: 5px solid silver;
-        font-family: Verdana;
-        font-size: 40px;
     }
+
+
+    .hidden-on-desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+        width: 95%;
+        min-height: 60px;
+        margin: auto;
+        border: 3px solid silver;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    nav {
+        padding: 0;
+        width: 95%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin: auto;
+    }
+
+    nav li {
+        list-style: none;
+        width: 100%;
+    }
+
     nav li a {
         display: flex;
         flex-flow: column nowrap;
-        width: 100%;
+        width: 95%%;
         min-height: 60px;
-        padding: 25px 5px;
-        margin: 25px auto;
+        margin: 30px 0;
+        list-style: none;
         background-color: lightgray;
         justify-content: center;
         align-items: center;
-        position: relative;
-        right: 25px;
-        font-size: 45px;
-        font-family: Verdana;
+        font-size: 30px;
     }
-    nav li {
-        list-style:none ;
-        width: 100%;
-    }
+
+
     h1 {
+        align-self: center;
         width: fit-content;
-        margin-left: 28%;
+        margin: auto;
         font-size: 100px;
     }
+    .header-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: auto;
+    }
     .header-img img {
-        width: 96%;
-        padding: 20px;
+        width: 95%;
+        padding: 0;
     }
     h2 {
         font-family: Verdana;
-        font-size: 50px;
+        font-size: 30px;
     }
     p {
-        font-size: 34px;
+        font-size: 15px;
         font-family: Verdana;
     }
+
 
 
 }
