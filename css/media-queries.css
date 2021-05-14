@@ -45,7 +45,7 @@
     nav li a {
         display: flex;
         flex-flow: column nowrap;
-        width: 95%%;
+        width: 95%;
         min-height: 60px;
         margin: 30px 0;
         list-style: none;
@@ -62,6 +62,7 @@
         margin: auto;
         font-size: 100px;
     }
+
     .header-img {
         display: flex;
         justify-content: center;
@@ -70,19 +71,63 @@
         padding: 0;
         margin: auto;
     }
+
     .header-img img {
         width: 95%;
         padding: 0;
     }
+
     h2 {
         font-family: Verdana;
         font-size: 30px;
     }
+
     p {
         font-size: 15px;
         font-family: Verdana;
     }
 
+}
+
+@media screen and (min-width: 551px) {
+
+    .hidden-on-desktop {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    h1 {
+        flex-grow: 30;
+    }
+
+    nav {
+        flex-grow: 5;
+        align-self: center;
+
+    }
+
+    nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        list-style: none;
+        padding: 0;
+        font-size: 15px;
+    }
+
+    .main {
+        width: 59%;
+    }
+
+    .sub-section {
+        width: 39%;
+    }
 
 
 }
