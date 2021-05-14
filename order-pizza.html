@@ -119,34 +119,67 @@
                             <div class="card-header text-white bg-primary">Choose Cheese and Sauce</div>
                             <div class="card mx-5 mt-4">
                                 <div class="card-header">Cheese</div>
-
+                                <ul class="list-group">
+                                    <li class="list-group-item">How Cheesy?</li>
+                                    <li class="list-group-item">
+                                        <select id="cheeseSelect" class="custom-select custom-select-lg mb-3">
+                                            <option selected>Open this select menu</option>
+                                            <option value="light">Light</option>
+                                            <option value="normal" selected>Normal</option>
+                                            <option value="extra">Extra</option>
+                                            <option value="double">Double</option>
+                                        </select></li>
+                                </ul>
                             </div>
                             <br>
                             <div class="card mx-5 mb-4">
-                                <div class="card-header">Crispy Thin</div>
+                                <div class="card-header">Sauce</div>
                                 <ul class="list-group">
-                                    <li class="list-group-item"> Thin enough for optimum crispy to crunchy ratio.
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input class="form-check-input ml-1" type="radio" name="crispyThin" id="crust3"
-                                               value="medium" checked>
-                                        <label class="form-check-label ml-4" for="crust3"> Medium (12") </label>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input class="form-check-input ml-1" type="radio" name="crispyThin" id="crust4"
-                                               value="large" checked>
-                                        <label class="form-check-label ml-4" for="crust4"> Large (14") </label>
-                                    </li>
+                                    <li class="list-group-item">What Type?</li>
+                                    <li class="list-group-item"><select class="custom-select custom-select-lg mb-3">
+                                        <option selected>Open this select menu</option>
+                                        <option value="tomato" selected>Tomato Sauce</option>
+                                        <option value="marinara">Marinara Sauce</option>
+                                        <option value="bbq">BBQ Sauce</option>
+                                        <option value="alfredo">Alfredo Sauce</option>
+                                    </select></li>
+                                    <li class="list-group-item">How much?</li>
+                                    <li class="list-group-item"><select class="custom-select custom-select-lg mb-3">
+                                        <option selected>Open this select menu</option>
+                                        <option value="light">Light</option>
+                                        <option value="normal" selected>Normal</option>
+                                        <option value="extra">Extra</option>
+                                    </select></li>
                                 </ul>
                             </div>
-                            <div class="card-footer d-flex flex-row align-items-center justify-content-end">
-                                <button class="nexttab btn btn-primary align-self-end">Next Step</button>
+                            <div class="card-footer d-flex flex-column align-content-end align-items-end">
+                                <div class="btn-group" role="group">
+                                    <button class="nexttab btn btn-primary"> < Previous Step</button>
+                                    <button class="nexttab btn btn-primary"> Next Step ></button>
+                                </div>
                             </div>
 
                         </div>
                     </div>
                     <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
-                        <div class="card">asdf</div>
+                        <div class="card"> <!-- first card third panel -->
+                            <div class="card-header">Toppings</div>
+                            <div class="form-check">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input type="checkbox" class="form-check-input ml-1" value="beef" id="beefCheck">
+                                        <label for="beefCheck" class="form-check-label ml-4">Beef</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input type="checkbox" class="form-check-input ml-1" value="ham" id="hamCheck">
+                                        <label for="hamCheck" class="form-check-label ml-4">Ham</label>
+                                    </li>
+                                    <li class="list-group-item">
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <footer>
 
