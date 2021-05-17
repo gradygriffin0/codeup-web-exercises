@@ -108,11 +108,23 @@
 // * * * *
 // * * * * *
 
- function pyramidNumber(num) {
-    var empty = '';
-    for (let i = 0; i < num; i++){
-        console.log(empty += '*')
-    }
-}
+//  function pyramidNumber(num) {
+//     var empty = '';
+//     for (let i = 0; i < num; i++){
+//         console.log(empty += '*')
+//     }
+// }
 
-pyramidNumber(10);
+// pyramidNumber(10);
+
+
+// May 17
+//Write a function named secondToLast(arr) that returns the data type of the second to last element of the array parameter.
+// When you call the function, pass in an array of your choosing
+
+// function secondToLast(arr){
+//     return arr[arr.length - 2];
+// }
+// var sampleArr = [100, [0,1], "string", null, NaN, [0,2], 100];
+//
+// console.log(secondToLast(sampleArr));
