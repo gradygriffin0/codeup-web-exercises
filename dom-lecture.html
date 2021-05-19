@@ -4,13 +4,40 @@
         <meta charset="UTF-8">
         <title>dom lecture</title>
 
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
               integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
               crossorigin="anonymous">
-        <link href="css/dom-lecture-css.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/dom-lecture-css.css">
+
 
     </head>
     <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col" id="border1">
+                    <p class="p-background">Lorem Ipsem</p>
+                </div>
+                <div class="col" id="border2">
+                    <p>Lorem Ipsem</p>
+                </div>
+                <div class="col" id="border3">
+                    <p class="p-background">Lorem Ipsem</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="border4">
+                    <p class="p-background">Lorem Ipsem</p>
+                </div>
+                <div class="col" id="border5">
+                    <p>Lorem Ipsem</p>
+                </div>
+                <div class="col" id="border6">
+                    <p class="p-background">Lorem Ipsem</p>
+                </div>
+            </div>
+
+        </div>
 
 
 
@@ -26,7 +53,9 @@
             // TODO: print the following items to the console: 1) A node that
             //  represents a div/item with a red border. 2) an array of elements
             //  whose text is dark-green. 3) an array of all paragraph elements
-
+            console.log(document.getElementById('border1'));
+            console.log(document.getElementsByClassName('p-background'));
+            console.log(document.getElementsByTagName('p'));
 
         </script>
     </body>

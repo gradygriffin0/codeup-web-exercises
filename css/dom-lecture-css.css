@@ -1,0 +1,35 @@
+body{
+    background: grey;
+}
+#border1 {
+    border: 1px solid red;
+    background: blue;
+}
+
+#border2 {
+    border: 1px solid blue;
+}
+
+#border3 {
+    border: 1px solid green;
+    background: blue;
+
+}
+
+#border4 {
+    border: 1px solid orange;
+}
+
+#border5 {
+    border: 1px solid violet;
+    background: blue;
+
+}
+
+#border6 {
+    border: 1px solid turquoise;
+}
+
+.p-background {
+    color: darkgreen;
+}
