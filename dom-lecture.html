@@ -57,6 +57,23 @@
             console.log(document.getElementsByClassName('p-background'));
             console.log(document.getElementsByTagName('p'));
 
+            var newEl = document.createElement('ul');
+
+            newEl.setAttribute('class', 'pizza');
+            for (let i = 0; i<5; i++){
+                let smallEl = document.createElement('li');
+                smallEl.setAttribute('id', `li${i + 1}`);
+                smallEl.innerText = `List item ${i + 1}`;
+                newEl.appendChild(smallEl);
+            }
+            let iEl = document.getElementsByTagName('li');
+
+            // for (let i = 0; i<4; i++){
+            //
+            //     iEl.innerHTML = `This is list item #${i + 1}`;
+            // }
+            console.log(newEl);
+
         </script>
     </body>
 </html>
