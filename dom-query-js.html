@@ -5,16 +5,25 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
-
+    <button type="button" id="button-header">Click for a new header.</button>
+    <br>
 <h1 id="main-header">Hello World!</h1>
-<ul>
+
+    <button type="button" id="button-list">Click for a new style of list.</button>
+    <br>
+
+    <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
     <li data-dbid="3">Item 3</li>
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
-<h2 id="sub-header">Hello Again.</h2>
+    <button type="button" id="button-sub-header">Click for a new sub-header.</button>
+    <h2 id="sub-header">Hello Again.</h2>
+
+    <br>
+    <button type="button" id="button-paragraph">Click to complete mission!</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -32,44 +41,97 @@
         var mainHeader = document.getElementById('main-header');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+
+        headerEvent();
+
+        function headerEvent(){
+            document.getElementById('button-header')
+            .addEventListener('click', changeHeader);
+        }
+
+        function changeHeader(){
             mainHeader.innerHTML = 'Javascript is Cool';
+
+        }
+
+
+
+
         // TODO: Uncomment the next line and get the sub header element by id
+
+
         var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.setAttribute('style', 'color: blue;')
+
+        subHeaderEvent();
+
+        function subHeaderEvent(){
+            document.getElementById('button-sub-header')
+            .addEventListener('click', subHeaderChanger);
+        }
+
+        function subHeaderChanger(){
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+            subHeader.setAttribute('style', `color: #${randomColor}`);
+        }
+
+
+
+
+
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
         console.log(listItems);
         // TODO: Set text color on every other list item to grey
-        for (let i = 0; i<listItems.length; i++){
-            if (i % 2 === 1) {
-                listItems[i].setAttribute('style', 'color: grey;')
+        // TODO: Set text color of li with dbid = 1 to blue
+        listEvent();
+        function listEvent(){
+            document.getElementById('button-list')
+            .addEventListener('click', listChanger);
+        }
+        function listChanger(){
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+            let randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+            for (let i = 0; i<listItems.length; i++){
+
+                if (i === 0) {
+                    listItems[i].setAttribute('style', `color: #${randomColor}`);
+                }
+                if (i % 2 === 1) {
+                    listItems[i].setAttribute('style', `color: #${randomColor2}`);
+                }
             }
         }
-        // TODO: Set text color of li with dbid = 1 to blue
-        listItems[0].setAttribute('style', 'color: blue;');
+
+
+
+
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!";
-        // TODO: change the text inside of 1 of the paragraphs to be a short paragraph about you
-        subParagraphs[0].innerHTML = "Hello my name is Grady, I am 21 years old. I enjoy basketball, cooking, spending time with " +
-            "friends and family, and coding!";
+        paragraphEvent();
 
-// TODO: log the second paragraph element from the list of all
-//  paragraphs
-        console.log(subParagraphs);
-// TODO: create a new ul element and 5 new li elements. Each of your li's should have some text inside of it
-        let newUL = document.createElement('ul');
-        for ( let i = 0; i<5; i++) {
-            let newLI = document.createElement('li')
-            newUL.appendChild()
+        function paragraphEvent(){
+            document.getElementById('button-paragraph')
+                .addEventListener('click', paragraphChanger);
         }
-// TODO: replace the last div's paragraph with your new ul. make sure the ul has all 5 li's inside of it
-// TODO: remove the last li
+
+        function paragraphChanger(){
+            var userInput = prompt("What would you like to add to the page?");
+            subParagraphs[0].innerHTML = `${userInput}`;
+        }
+
+
+
+
+
+
+
     })();
 </script>
 </body>
