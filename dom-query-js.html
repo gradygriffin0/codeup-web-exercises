@@ -1,138 +1,162 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>DOM: Query and Modify</title>
-</head>
-<body>
-    <button type="button" id="button-header">Click for a new header.</button>
-    <br>
-<h1 id="main-header">Hello World!</h1>
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM: Query and Modify</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+              crossorigin="anonymous">
+    </head>
+    <body>
+        <!--    <button type="button" id="button-header">Click for a new header.</button>-->
+        <br>
+        <h1 id="1">Hello World!</h1>
 
-    <button type="button" id="button-list">Click for a new style of list.</button>
-    <br>
+        <!--    <button type="button" id="button-list">Click for a new style of list.</button>-->
+        <br>
 
-    <ul>
-    <li data-dbid="1">Item 1</li>
-    <li data-dbid="2">Item 2</li>
-    <li data-dbid="3">Item 3</li>
-    <li data-dbid="4">Item 4</li>
-    <li data-dbid="5">Item 5</li>
-</ul>
-    <button type="button" id="button-sub-header">Click for a new sub-header.</button>
-    <h2 id="sub-header">Hello Again.</h2>
+        <ul id="3">
+            <li data-dbid="1">Item 1</li>
+            <li data-dbid="2">Item 2</li>
+            <li data-dbid="3">Item 3</li>
+            <li data-dbid="4">Item 4</li>
+            <li data-dbid="5">Item 5</li>
+        </ul>
+        <!--    <button type="button" id="button-sub-header">Click for a new sub-header.</button>-->
+        <h2 id="2">Hello Again.</h2>
 
-    <br>
-    <button type="button" id="button-paragraph">Click to complete mission!</button>
-<p class="sub-paragraph">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
-</p>
+        <br>
+        <!--    <button type="button" id="button-paragraph">Click to complete mission!</button>-->
 
-<script>
-    (function() {
-        "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById('main-header');
+        <p class="sub-paragraph" id="4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <div id="buttonHolder">
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        </div>
 
-        headerEvent();
-
-        function headerEvent(){
-            document.getElementById('button-header')
-            .addEventListener('click', changeHeader);
-        }
-
-        function changeHeader(){
-            mainHeader.innerHTML = 'Javascript is Cool';
-
-        }
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+                crossorigin="anonymous"></script>
+        <script>
+            (function () {
+                "use strict";
+                // TODO: Uncomment next line and get the main header element by id
 
 
+                setTimeout(buttonMaker, 1000);
 
+                function buttonMaker() {
+                    var check = confirm("Do you want to make this page more interesting?");
+                    while (check !== true) {
+                        let check = confirm("Are you sure?");
+                        if (check === true) {
+                            continue;
+                        }
+                    }
 
-        // TODO: Uncomment the next line and get the sub header element by id
-
-
-        var subHeader = document.getElementById('sub-header');
-
-        // TODO: Set the text color of subHeader to blue
-
-        subHeaderEvent();
-
-        function subHeaderEvent(){
-            document.getElementById('button-sub-header')
-            .addEventListener('click', subHeaderChanger);
-        }
-
-        function subHeaderChanger(){
-            let randomColor = Math.floor(Math.random()*16777215).toString(16);
-
-            subHeader.setAttribute('style', `color: #${randomColor}`);
-        }
-
-
-
-
-
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li');
-        console.log(listItems);
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
-        listEvent();
-        function listEvent(){
-            document.getElementById('button-list')
-            .addEventListener('click', listChanger);
-        }
-        function listChanger(){
-            let randomColor = Math.floor(Math.random()*16777215).toString(16);
-            let randomColor2 = Math.floor(Math.random()*16777215).toString(16);
-            for (let i = 0; i<listItems.length; i++){
-
-                if (i === 0) {
-                    listItems[i].setAttribute('style', `color: #${randomColor}`);
+                    let arr = [changeHeader, listChanger, subHeaderChanger, paragraphChanger];
+                    arr.forEach(function (listener) {
+                        let newButton = document.createElement('button');
+                        newButton.innerText = ('click me');
+                        newButton.setAttribute("class", "btn btn-pill btn-primary p-2 m-4 border-rounded");
+                        newButton.addEventListener('click', listener);
+                        for (let i = 0; i < 4; i++) {
+                            document.getElementById(`buttonHolder`)
+                                .appendChild(newButton);
+                        }
+                    })
+                    console.log('success');
                 }
-                if (i % 2 === 1) {
-                    listItems[i].setAttribute('style', `color: #${randomColor2}`);
+
+                // setTimeout(buttonMaker, 1000);
+
+                // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+
+
+                // function headerEvent(){
+                //     document.getElementById('button1')
+                //     .addEventListener('click', changeHeader);
+                // }
+
+                function changeHeader() {
+
+                    document.getElementById('1')
+                        .innerText = 'Javascript is Cool';
+
                 }
-            }
-        }
 
 
+                // TODO: Uncomment the next line and get the sub header element by id
 
 
+                // TODO: Set the text color of subHeader to blue
 
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
+                // function subHeaderEvent(){
+                //    let button = document.getElementById('button2');
+                //     console.log(button);
+                //     button.addEventListener('click', subHeaderChanger);
+                // }
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        paragraphEvent();
-
-        function paragraphEvent(){
-            document.getElementById('button-paragraph')
-                .addEventListener('click', paragraphChanger);
-        }
-
-        function paragraphChanger(){
-            var userInput = prompt("What would you like to add to the page?");
-            subParagraphs[0].innerHTML = `${userInput}`;
-        }
+                function subHeaderChanger() {
+                    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+                    document.getElementById('2')
+                        .setAttribute('style', `color: #${randomColor}`);
+                }
 
 
+                // TODO: Uncomment the next line and get all list items
+
+                console.log(listItems);
+                // TODO: Set text color on every other list item to grey
+                // TODO: Set text color of li with dbid = 1 to blue
 
 
+                // function listEvent(){
+                //     document.getElementById('button3')
+                //     .addEventListener('click', listChanger);
+                // }
+                function listChanger() {
+                    var listItems = document.getElementsByTagName('li');
+                    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+                    let randomColor2 = Math.floor(Math.random() * 16777215).toString(16);
+                    for (let i = 0; i < listItems.length; i++) {
+
+                        if (i === 0) {
+                            listItems[i].setAttribute('style', `color: #${randomColor}`);
+                        }
+                        if (i % 2 === 1) {
+                            listItems[i].setAttribute('style', `color: #${randomColor2}`);
+                        }
+                    }
+                }
 
 
+                // TODO: Uncomment the next line and get all elements with class name sub-paragraph
 
-    })();
-</script>
-</body>
+
+                // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+
+                // function paragraphEvent(){
+                //     document.getElementById('button4')
+                //         .addEventListener('click', paragraphChanger);
+                // }
+
+                function paragraphChanger() {
+                    var subParagraphs = document.getElementsByClassName('sub-paragraph');
+                    var userInput = prompt("What would you like to add to the page?");
+                    subParagraphs[0].innerText = `${userInput}`;
+                }
+
+
+            })();
+        </script>
+    </body>
 </html>
