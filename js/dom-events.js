@@ -22,6 +22,7 @@ function addPost() {
     newPostContainer.setAttribute('class', 'container');
     newPostChild.setAttribute('class', 'col-12 px-0');
     post.innerText = (`${userText.value}`);
+    post.append('body');
 }
 
 function buildBlogPost(){
