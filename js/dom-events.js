@@ -1,9 +1,10 @@
 
 
+addButtonEvent();
 
 function addButtonEvent() {
     document.getElementById("submitBtn")
-        .addEventListener("click", addPost)
+        .addEventListener("click", addPost);
 }
 
 function addPost() {
@@ -15,7 +16,7 @@ function addPost() {
 
 function buildBlogPost(){
     let userText = document.getElementById('user-input');
-    let newPost = document.createElement('div');
+    let newPost = document.createElement('p');
     newPost.textContent = userText.value;
     return newPost;
 }
