@@ -41,3 +41,7 @@ function getNameNode() {
     userName.textContent = `Submitted by  ${userNameInput.value}`;
     return userName;
 }
+
+function push {
+
+}
