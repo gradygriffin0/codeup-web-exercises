@@ -128,3 +128,15 @@
 // var sampleArr = [100, [0,1], "string", null, NaN, [0,2], 100];
 //
 // console.log(secondToLast(sampleArr));
+
+
+// sample array sort for coffee project
+        // function getCoffeeData(){
+        //     let arr = ["American", "European", "City", "Ducky", "Vienesse"];
+        //     return arr;
+        // }
+        // function searchByIndex(query) {
+        //     query.toString().toLowerCase();
+        //     let data = getCoffeeData();
+        //     for ()
+        // }
