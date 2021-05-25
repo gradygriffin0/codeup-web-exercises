@@ -28,15 +28,24 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// added all button to select all roast types
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    console.log(roastSelection.value)
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+        // all roast
+        if (selectedRoast === "all") {
+            console.log("all");
+            filteredCoffees.push(coffee);
+        }
+        // -
     });
+
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -57,7 +66,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
+// working searchbar for our divs
 function searchFunction(){
     var searchInput, filter, ul, li, div, textValue, result;
     searchInput = document.getElementById('mySearch');
@@ -66,10 +75,10 @@ function searchFunction(){
     li = ul.getElementsByTagName('li');
 
     for (let i = 0; i < li.length; i++) {
-        result = li[i].getElementsByTagName("div")[0];
+        div = li[i].getElementsByTagName("div")[0];
         console.log(result)
 
-        textValue = result.textContent || result.innerText;
+        textValue = div.textContent || div.innerText;
         if (textValue.toLowerCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {
