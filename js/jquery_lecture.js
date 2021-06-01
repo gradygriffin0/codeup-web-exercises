@@ -1,15 +1,15 @@
 "use strict";
-console.log("test");
+// console.log("test");
 
-$(document).ready(function () {
-    alert(`This webpage has loaded`);
-});
+// $(document).ready(function () {
+//     alert(`This webpage has loaded`);
+// });
 
-$("#all-caps").hide();
-
-$(`span`).hide();
-
-$(`.show-me`).show();
+// $("#all-caps").hide();
+//
+// $(`span`).hide();
+//
+// $(`.show-me`).show();
 
 //syntax
     // let document = {
@@ -83,3 +83,12 @@ $(`.show-me`).show();
     // $(document).ready(function (){
     //     console.log(new Date());
     // })
+
+$('.pink').css('background-color', 'pink');
+$('.orange').css('background-color','orange');
+
+window.onload = function(){
+    ($('.pink').hide());
+}
+
+$(document).ready($('.orange').hide());
