@@ -84,6 +84,10 @@
     //     console.log(new Date());
     // })
 
+for(let i = 0; i<2000; i++){
+    $('body').append("<img alt='1' style='margin-top: 15px; width: 100px; height: auto;' src='assets/img/explosion.png'>")
+}
+
 $('.pink').css('background-color', 'pink');
 $('.orange').css('background-color','orange');
 
