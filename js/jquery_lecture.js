@@ -75,10 +75,11 @@ $(`.show-me`).show();
 // do something when the window is done loading
 // wait for elements to load
 
+
 //document.ready
 // JQuery
 // won't wait for images
 // do something when the DOM is finished loading
-$(document).ready(function (){
-
-})
+    // $(document).ready(function (){
+    //     console.log(new Date());
+    // })
