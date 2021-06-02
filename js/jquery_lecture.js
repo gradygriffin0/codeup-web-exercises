@@ -96,3 +96,13 @@ window.onload = function(){
 }
 
 $(document).ready($('.orange').hide());
+
+
+// multiple selectors
+
+    // works similarly to css selectors
+
+    // $("p, div") // 1 string with two elements separated by a comma to select unrelated things at the same time
+
+    // $("p div") // all div elements inside p tags.
+
