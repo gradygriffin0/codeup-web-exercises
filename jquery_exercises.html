@@ -20,8 +20,12 @@
             $('body').append("<h1 id='h1-1' class='headerClass'>Hello</h1>")
                 .append("<p id='p-1' class='paraClass'>Here's my paragraph!</p>")
                 .append("<ul id='ul-1' class='ulClass'> </ul>");
+
             for(let i=0; i<3; i++){
                 $('ul').append(`<li id='list-${i}' class="listItem"> ${i} </li>`);
+            }
+            window.onload = function(){
+                alert(`${$("list-1").text()}`);
             }
 
         </script>
