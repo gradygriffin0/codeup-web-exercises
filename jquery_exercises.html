@@ -8,25 +8,52 @@
         <title>exercises</title>
     </head>
     <body>
+        <h1 id='h1-1' class='headerClass'>Hello</h1>
+        <p id='p-1' class='paraClass'>Here's my paragraph!</p>
+        <ul id='ul-1' class='ulClass'>
+            <li id="list-1" class="listItem"> C </li>
+            <li id="list-2" class="listItem"> O </li>
+            <li id="list-3" class="listItem"> O </li>
+            <li id="list-4" class="listItem"> L </li>
 
+            <div>
+                <ol>
+                    <li id='codeup' class="codeup"> T E S T </li>
+                    <li class="codeup"> T E S T </li>
+                    <li class="codeup"> T E S T </li>
+                </ol>
+            </div>
 
+        </ul>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"
                 integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
                 crossorigin="anonymous"></script>
         <script>
             // $(document).ready(alert("JQuery Loaded"));
-
-
-            $('body').append("<h1 id='h1-1' class='headerClass'>Hello</h1>")
-                .append("<p id='p-1' class='paraClass'>Here's my paragraph!</p>")
-                .append("<ul id='ul-1' class='ulClass'> </ul>");
-
-            for(let i=0; i<3; i++){
-                $('ul').append(`<li id='list-${i}' class="listItem"> ${i} </li>`);
-            }
+            var ul = $("#ul-1");
             window.onload = function(){
-                alert(`${$("list-1").text()}`);
+                alert(ul.text());
             }
+
+            var needsBorder = $('.codeup')
+            needsBorder.css({
+                'border': '1px solid red',
+
+            })
+
+            var listItems = $('li')
+            listItems.css({
+                'font-size':'20px',
+            })
+
+            var objective3 = $('h1, p, li')
+            objective3.css({
+                'color': 'blue',
+            })
+
+            var header = $('h1')
+
+            alert(header.text());
 
         </script>
     </body>
