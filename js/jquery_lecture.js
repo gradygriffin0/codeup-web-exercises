@@ -84,7 +84,7 @@
     //     console.log(new Date());
     // })
 
-for(let i = 0; i<2000; i++){
+for(let i = 0; i<100; i++){
     $('body').append("<img alt='1' style='margin-top: 15px; width: 100px; height: auto;' src='assets/img/explosion.png'>")
 }
 
