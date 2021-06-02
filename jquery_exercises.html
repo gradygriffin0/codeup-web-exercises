@@ -8,53 +8,91 @@
         <title>exercises</title>
     </head>
     <body>
-        <h1 id='h1-1' class='headerClass'>Hello</h1>
-        <p id='p-1' class='paraClass'>Here's my paragraph!</p>
-        <ul id='ul-1' class='ulClass'>
-            <li id="list-1" class="listItem"> C </li>
-            <li id="list-2" class="listItem"> O </li>
-            <li id="list-3" class="listItem"> O </li>
-            <li id="list-4" class="listItem"> L </li>
+        <h1 id="h1-1" style="text-align: center; border: 1px solid black;" class="headerClass">Hello</h1>
+        <p id="p-1" class="paraClass">Here's my paragraph! Double Click Me!</p>
+        <ul id="ul-1" class="ulClass"> Hover over my List:
+            <li id="list-1" class="listItem"> C</li>
+            <li id="list-2" class="listItem"> O</li>
+            <li id="list-3" class="listItem"> O</li>
+            <li id="list-4" class="listItem"> L</li>
 
-            <div>
-                <ol>
-                    <li id='codeup' class="codeup"> T E S T </li>
-                    <li class="codeup"> T E S T </li>
-                    <li class="codeup"> T E S T </li>
-                </ol>
-            </div>
+                                       <!--            <div>-->
+                                       <!--                <ol>-->
+                                       <!--                    <li id='codeup' class="codeup"> T E S T </li>-->
+                                       <!--                    <li class="codeup"> T E S T </li>-->
+                                       <!--                    <li class="codeup"> T E S T </li>-->
+                                       <!--                </ol>-->
+                                       <!--            </div>-->
 
         </ul>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"
                 integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
                 crossorigin="anonymous"></script>
         <script>
+            //exercise 1
             // $(document).ready(alert("JQuery Loaded"));
-            var ul = $("#ul-1");
-            window.onload = function(){
-                alert(ul.text());
-            }
-
-            var needsBorder = $('.codeup')
-            needsBorder.css({
-                'border': '1px solid red',
-
+            //exercise 2
+            // var ul = $("#ul-1");
+            // window.onload = function(){
+            //     alert(ul.text());
+            // }
+            //
+            // var needsBorder = $('.codeup')
+            // needsBorder.css({
+            //     'border': '1px solid red',
+            //
+            // })
+            //
+            // var listItems = $('li')
+            // listItems.css({
+            //     'font-size':'20px',
+            // })
+            //
+            // var objective3 = $('h1, p, li')
+            // objective3.css({
+            //     'color': 'blue',
+            // })
+            //
+            // var header = $('h1')
+            //
+            // alert(header.text());
+            //exercise3
+            var clickable = $('#h1-1');
+            clickable.click(function () {
+                alert("Don't touch that");
+            });
+            var paraClickable = $('#p-1');
+            paraClickable.dblclick(function () {
+                console.log('test');
+                let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+                let randomSize = Math.floor((Math.random() * 100) + 1);
+                console.log(randomColor);
+                console.log(randomSize);
+                paraClickable.css({
+                    'color': (`#${randomColor}`),
+                    'font-size': randomSize,
+                })
             })
-
-            var listItems = $('li')
-            listItems.css({
-                'font-size':'20px',
+            var hoverThis = $('#ul-1')
+            hoverThis.css({
+                'transition': 'all 1s ease-in-out',
+                'text-align': 'center',
+                'list-style': 'none',
             })
+            hoverThis.hover(
+                function () {
+                    hoverThis.css({
+                        'transform': 'scale(2.5)',
+                        'background': 'red',
+                    })
+                },
+                function () {
+                    hoverThis.css({
+                        'transform': 'scale(1)',
+                        'background': 'none',
+                    })
 
-            var objective3 = $('h1, p, li')
-            objective3.css({
-                'color': 'blue',
-            })
-
-            var header = $('h1')
-
-            alert(header.text());
-
+                })
         </script>
     </body>
 </html>
