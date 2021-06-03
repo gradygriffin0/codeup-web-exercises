@@ -19,15 +19,18 @@ function addListeners(){
 }
 //add mouseover/mouseout events to all selected elements
 function addEvents(cardContainers, imgPath, listenerType){
-    cardContainers.forEach((cc) => {
-        let card = cc;
-        //create listener which will call function change the image
-        let listener = function (event) {
-            let cardImg = card.querySelector(".card .card-img-top");
-            changeImage(cardImg, imgPath);
-        };
-        cc.addEventListener(listenerType, listener);
-    });
+    // cardContainers.forEach((cc) => {
+    //     let card = cc;
+    //     //create listener which will call function change the image
+    //     let listener = function (event) {
+    //         let cardImg = card.querySelector(".card .card-img-top");
+    //         changeImage(cardImg, imgPath);
+    //     };
+    //     cc.addEventListener(listenerType, listener);
+    // });
+    // cardContainers.hover(
+    //     function
+    // )
 }
 //actual function to swap images
 function changeImage(card, imgPath){
