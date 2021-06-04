@@ -7,8 +7,8 @@
               crossorigin="anonymous">
     </head>
     <body>
-        <h1 class="display m-auto border text-center">Konami Code</h1>
-        <div class="d-flex justify-content-center flex-wrap" id="codehold"></div>
+        <h1 class="display m-auto border text-danger text-center">Konami Code</h1>
+        <div class="d-flex justify-content-center flex-wrap" id="codehold"> </div>
 
 
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -22,6 +22,7 @@
                 crossorigin="anonymous"></script>
         <script>
             "use strict";
+
             let sequence = [];
 
             function keyLabels(keycode) {
@@ -61,6 +62,9 @@
                 var codehold = document.getElementById('codehold');
                 var container = document.createElement('div');
                 container.setAttribute('class', 'card col-3 text-center border m-1');
+                $(container).slideDown(0);
+                $(container).fadeIn(500, function(){
+                })
 
                 if (keyLabels(key) === "0") {
                     return
@@ -70,6 +74,9 @@
                         var container = document.createElement('div');
                         container.setAttribute('class','w-100 card col-3 text-center border bg-danger my-3');
                         // codehold.appendChild(breakElement);
+                    $(container).fadeIn(500, function(){
+                    })
+
 
                 }
 
@@ -96,15 +103,6 @@
                 }
 
             });
-            function createKonami(url){
-                document.body.innerHTML = "";
-                var container = document.createElement('div');
-                var image = document.createElement('img');
-                image.setAttribute('src', url);
-                container.setAttribute('class','border w-auto m-auto')
-                container.append(image);
-
-            }
 
             function konami(sequence) {
                 // console.log(sequence);
@@ -115,20 +113,22 @@
                     $('h1').hide();
                     $("#codehold").html("");
                     $('body').css({
-                        // 'background': 'url("assets/img/contra30lives.jpeg")',
-                        // 'background-repeat': 'no-repeat',
+                        'background': 'url("assets/img/contra30lives.jpeg")',
+                        'background-repeat': 'no-repeat',
                         'background-color': 'black',
+                        'background-attachment':'fixed',
+                        'background-position': 'center',
                     })
-                    createKonami('assets/img/contra30lives.jpeg');
 
                     setTimeout(
                         function () {
                             $('body').css({
-                                // 'background': 'url("assets/img/contrarip.gif")',
-                                // 'background-repeat': 'no-repeat',
+                                'background': 'url("assets/img/contrarip.gif")',
+                                'background-repeat': 'no-repeat',
                                 'background-color': 'black',
+                                'background-attachment':'fixed',
+                                 'background-position': 'center',
                             })
-                            createKonami("assets/img/contrarip.gif");
                         }
                         , 4000);
 
