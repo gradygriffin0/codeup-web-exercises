@@ -60,7 +60,7 @@
             function createKeyLabels(key) {
                 var codehold = document.getElementById('codehold');
                 var container = document.createElement('div');
-                container.setAttribute('class', 'card col-3 text-center border bg-success m-1');
+                container.setAttribute('class', 'card col-3 text-center border m-1');
 
                 if (keyLabels(key) === "0") {
                     return
@@ -96,6 +96,15 @@
                 }
 
             });
+            function createKonami(url){
+                document.body.innerHTML = "";
+                var container = document.createElement('div');
+                var image = document.createElement('img');
+                image.setAttribute('src', url);
+                container.setAttribute('class','border w-auto m-auto')
+                container.append(image);
+
+            }
 
             function konami(sequence) {
                 // console.log(sequence);
@@ -106,18 +115,20 @@
                     $('h1').hide();
                     $("#codehold").html("");
                     $('body').css({
-                        'background': 'url("assets/img/contra30lives.jpeg")',
-                        'background-repeat': 'no-repeat',
+                        // 'background': 'url("assets/img/contra30lives.jpeg")',
+                        // 'background-repeat': 'no-repeat',
                         'background-color': 'black',
                     })
+                    createKonami('assets/img/contra30lives.jpeg');
 
                     setTimeout(
                         function () {
                             $('body').css({
-                                'background': 'url("assets/img/contrarip.gif")',
-                                'background-repeat': 'no-repeat',
+                                // 'background': 'url("assets/img/contrarip.gif")',
+                                // 'background-repeat': 'no-repeat',
                                 'background-color': 'black',
                             })
+                            createKonami("assets/img/contrarip.gif");
                         }
                         , 4000);
 
