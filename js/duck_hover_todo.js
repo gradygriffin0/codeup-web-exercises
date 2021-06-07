@@ -55,6 +55,6 @@ function changeImage(card, imgPath){
 $(document).ready(function(){
  $('.list-group-item').click(function(e){
      var clickedListItem = $(this);
-     clickedListItem.css({'text-transform':'uppercase'})
+     clickedListItem.toggleClass('clicked');
  })
 })
