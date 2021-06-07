@@ -51,3 +51,7 @@ function addEvents(cardContainers, imgPath, listenerType){
 function changeImage(card, imgPath){
     $(card).find('img').attr('src', imgPath);
 }
+
+$(document).ready(function(){
+
+})
