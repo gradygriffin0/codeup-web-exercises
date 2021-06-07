@@ -53,6 +53,34 @@
             </dd>
         </dl>
 
+        <h3>Yellowstone</h3>
+        <ul>
+            <li>Yellowstone is the world’s first national park.</li>
+            <li>3,472 square miles (8,991 km2)</li>
+            <li>More than 10,000 hydrothermal features</li>
+
+        </ul>
+        <h3>Yosemite</h3>
+        <ul>
+            <li>Yosemite National Park covers nearly 1,200 square miles.</li>
+            <li>The American Indians who live in Yosemite are called the Ahwahneechee Indians. Their traditional homes
+                look like teepees, but are actually made of incense-cedar bark.
+            </li>
+            <li>California has approximately 7,000 known plant species. Yosemite contains twenty percent of those
+                species.
+            </li>
+        </ul>
+        <h3>Death Valley</h3>
+        <ul>
+            <li>Death Valley National Park covers a total area of 3,367,627 acres</li>
+            <li>The name Death Valley came from a group of pioneers lost in the area in 1849. Although only one of the
+                group died, they all thought they would, and dubbed the area Death Valley as they finally exited.
+            </li>
+            <li>Death Valley is the largest national park in the United States outside of Alaska, taking over the title
+                from Yellowstone National Park upon its creation in 1994.
+            </li>
+        </ul>
+
 
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"
                 integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -61,20 +89,27 @@
                 integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
                 crossorigin="anonymous"></script>
         <script>
-
-           $(document).ready(function(){
-               let definitions = $('dd');
-               definitions.addClass('invisible');
-               console.log(definitions.hasClass('invisible'));
-
-               $('#click').click(function(e){
+            // <!--exercise one-->
+            // $(document).ready(function () {
+            //     let definitions = $('dd');
+            //     definitions.addClass('invisible');
+            //     console.log(definitions.hasClass('invisible'));
+            //
+            //     $('#click').click(function (e) {
+            //         e.preventDefault();
+            //         definitions.toggleClass('invisible');
+            //         console.log(definitions.hasClass('invisible'));
+            //
+            //     })
+            // });
+        //    exercise 2
+            $(document).ready(function(){
+                $('#click').click(function(e){
                    e.preventDefault();
-                   definitions.toggleClass('invisible');
-                   console.log(definitions.hasClass('invisible'));
+                   $('ul li:nth-child(3)').css({'background-color':'blue',})
 
-               })
-           });
-
+                });
+            })
         </script>
     </body>
 </html>
