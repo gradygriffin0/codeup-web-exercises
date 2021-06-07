@@ -106,9 +106,15 @@
             $(document).ready(function(){
                 $('#click').click(function(e){
                    e.preventDefault();
-                   $('ul li:nth-child(3)').css({'background-color':'blue',})
+                   $('ul li:nth-child(3)').css({'background-color':'yellow',})
 
                 });
+                $('h3').click(function(e){
+                    e.preventDefault();
+                    console.log('success');
+                    // console.log($(this.children()));
+                    $(this).next('ul').children().css({'font-weight':'bold',});
+                })
             })
         </script>
     </body>
