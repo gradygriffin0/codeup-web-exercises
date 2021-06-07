@@ -115,7 +115,15 @@
                     // console.log($(this.children()));
                     $(this).next('ul').children().css({'font-weight':'bold',});
                 })
+                $('li').click(function(e){
+                    e.preventDefault();
+                    console.log('success');
+                    let papa = $(this).parent();
+                    // console.log($(this).parent());
+                    papa.children('li:nth-child(1)').css({'color':'blue',})
+                })
             })
+
         </script>
     </body>
 </html>
