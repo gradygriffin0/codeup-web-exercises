@@ -127,7 +127,8 @@
             <section class="row">
                 <div class="col">
                     <h2>Some Form</h2>
-                    <form action="" method="POST" name="user">
+                    <form id="myForm" action="" method="POST" name="user">
+
                         <div class="form-group">
                             <label for="first">First Name</label>
                             <input class="form-control" type="text" name="first" id="first"
@@ -143,6 +144,11 @@
                             <input class="form-control" type="text" name="handleField" id="handleField"
                                    placeholder="Enter Handle">
                         </div>
+                        <div class="form-group">
+                            <label for="redirect-url">Travel to site</label>
+                            <input id="redirect-url" type="text" class="form-control" placeholder="Enter URL" type="text" name="email">
+                        </div>
+
                         <div class="d-grid my-2">
                             <button type="button" class="btn btn-primary" id="submitBtn">Submit
                             </button>
