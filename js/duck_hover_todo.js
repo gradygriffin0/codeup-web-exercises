@@ -60,15 +60,21 @@ $(document).ready(function () {
         clickedListItem.toggleClass('clicked');
     })
 })
+// $(document).ready(function(){
+//     $('#submitBtn').click(function(e){
+//         let newSite = $('#redirect-url').val();
+//         if (!newSite.includes('https://'){
+//             window.location.assign('https://' + newSite);
+//         }
+//         else{
+//             window.location.assign(newSite);
+//         }
+//
+//     })
+// })
+
 $(document).ready(function(){
     $('#submitBtn').click(function(e){
-        let newSite = $('#redirect-url').val();
-        if (!newSite.includes('https://'){
-            window.location.assign('https://' + newSite);
-        }
-        else{
-            window.location.assign(newSite);
-        }
 
     })
 })
