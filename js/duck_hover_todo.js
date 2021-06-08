@@ -88,10 +88,14 @@ $(document).ready(function(){
         if (handleVal === ""){
             alert("Please enter your handle");
         }
-        else{
-            console.log(firstVal);
-            console.log(lastVal);
-            console.log(handleVal);
+        else {
+            let person = {
+                firstName: firstVal,
+                lastName: lastVal,
+                handle: handleVal
+            }
+            console.log(person);
+
         }
 
     })
