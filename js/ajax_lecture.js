@@ -106,7 +106,14 @@
 $('#clickMe').click(function () {
     var userInput = $('#userName').val();
     var passInput = $('#password').val();
+    console.log($.ajax("https://jsonplaceholder.typicode.com/posts", {
+        type: "POST",
+        data: {
+            username: userInput,
+            password: passInput,
+        }
+    }));
 
-})
+});
 
 
