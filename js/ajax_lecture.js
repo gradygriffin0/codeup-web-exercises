@@ -103,17 +103,31 @@
 
 // console.log($.ajax("https://jsonplaceholder.typicode.com/posts"));
 
-$('#clickMe').click(function () {
-    var userInput = $('#userName').val();
-    var passInput = $('#password').val();
-    console.log($.ajax("https://jsonplaceholder.typicode.com/posts", {
-        type: "POST",
-        data: {
-            username: userInput,
-            password: passInput,
+//click me form
+    // $('#clickMe').click(function () {
+    //     var userInput = $('#userName').val();
+    //     var passInput = $('#password').val();
+    //     console.log($.ajax("https://jsonplaceholder.typicode.com/posts", {
+    //         type: "POST",
+    //         data: {
+    //             username: userInput,
+    //             password: passInput,
+    //         }
+    //     }));
+    //
+    // });
+
+
+// array data
+
+console.log($.ajax("https://jsonplaceholder.typicode.com/comments", {
+
+}).done(function(data, status){
+    for (let i = 0; i < data.length; i++){
+        if (data[i].postId === 1){
+            console.log(data[i]);
         }
-    }));
-
-});
-
+    }
+    console.log(status);
+}));
 
