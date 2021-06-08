@@ -76,5 +76,23 @@ $(document).ready(function () {
 $(document).ready(function(){
     $('#submitBtn').click(function(e){
 
+        let firstVal = $("#first").val();
+        let lastVal = $("#last").val();
+        let handleVal = $("#handleField").val();
+        if (firstVal === ""){
+            alert("Please enter a first name");
+        }
+        if (lastVal === ""){
+            alert("Please enter a last name");
+        }
+        if (handleVal === ""){
+            alert("Please enter your handle");
+        }
+        else{
+            console.log(firstVal);
+            console.log(lastVal);
+            console.log(handleVal);
+        }
+
     })
 })
