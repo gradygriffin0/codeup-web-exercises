@@ -49,7 +49,9 @@ function addGeocoderEvent(geocoder){
     geocoder.on('result', function(e){
         // when the event fires the lngLat is set to
         marker.setLngLat(e.result.geometry.coordinates)
+        setPopup(e.result.place_name);
     })
+
 }
 
 
