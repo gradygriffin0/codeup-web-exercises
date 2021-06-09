@@ -19,8 +19,13 @@ var map = new mapboxgl.Map({
 });
 
 //function call to create geocoder thru setGeocoder; then adds it to map thru addGeocoderToMap;
+let marker = setMarker([-98.4152, 29.5119]);
 let geocoder = setGeocoder();
 addGeocoderToMap(geocoder);
+//adds the searchbar event marker;
+addGeocoderEvent(geocoder);
+//call setpopup and pass in the text we want appended to our marker
+setPopup("Hello this is a popup");
 
 //creates and returns a new geocoder;
 function setGeocoder(){
@@ -39,13 +44,16 @@ function addGeocoderToMap(geocoder){
     // gets map and adds control
     map.addControl(geocoder);
 }
-
+//adds event listener and sets new marker location;
 function addGeocoderEvent(geocoder){
-    geocoder.on({})
+    geocoder.on('result', function(e){
+        // when the event fires the lngLat is set to
+        marker.setLngLat(e.result.geometry.coordinates)
+    })
 }
 
 
-let marker = setMarker([-98.4152, 29.5119]);
+
 function setMarker(point) {
     // set a new object, set the longitude and latitude, then add to existing map obj;
     return (new mapboxgl.Marker().setLngLat(point).addTo(map));
@@ -56,4 +64,10 @@ function addMapEvent(marker){
     map.on('click', function(e){
         marker.setLngLat(e.lngLat).addTo(map);
     })
+}
+
+
+function setPopup(textDetails){
+    let popup = new mapboxgl.Popup().setHTML(`<p>${textDetails}</p>`).addTo(map);
+    marker.setPopup(popup);
 }
