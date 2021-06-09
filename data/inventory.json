@@ -30,5 +30,22 @@
     "tool"
   ],
   "price": 10
-}
+}, {
+  "title": "Pickaxes",
+  "quantity": 1,
+  "categories": [
+    "tool",
+    "outdoor"
+  ],
+  "price": 50
+},
+  {
+    "title": "Pickaxes2",
+    "quantity": 1,
+    "categories": [
+      "tool",
+      "outdoor"
+    ],
+    "price": 50
+  }
 ]
