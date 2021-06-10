@@ -17,11 +17,16 @@ function getMap() {
     })
 }
 
+setZoom();
+function setZoom(){
+    var zoom = $('#zoom').val()
+    console.log(zoom);
+}
+
 // setMarker generates the marker, calling it to marker makes it so the marker is changeable
 // let markerJs = setMarker([-98.482132, 29.494401]);
 // let markerWings = setMarker([-98.396032, 29.51381]);
 // let markerTwins = setMarker([-98.503763, 29.519955]);
-
 function setMarker(point) {
     return new mapboxgl.Marker().setLngLat(point).addTo(map);
 }
