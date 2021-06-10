@@ -13,13 +13,14 @@
         <link rel="stylesheet"
               href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
               type="text/css">
+        <link rel="stylesheet" href="css/mapbox_maps_api.css">
 
         <title>map practice</title>
     </head>
-    <body>
+    <body class="bg-light">
         <div class="border border-lg my-3 m-auto bg-light" id="map" style="width: 500px; height: 500px;"></div>
         <div class="display-6 my-0 m-auto text-center">Zoom</div>
-        <select class="form-select form-select-lg my-4 mt-0 m-auto text-center" style="width: 100px; height: auto;" id="zoom">
+        <select class="form-select form-select-lg my-4 mt-0 m-auto text-center text-sm"  id="zoom">
             <option value="11.5">3x</option>
             <option value="10">2x</option>
             <option selected value="9">1x</option>

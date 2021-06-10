@@ -1,0 +1,12 @@
+
+select {
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+    width: 100px !important;
+    height: 40px !important;
+    margin: 10px auto !important;
+    font-size: 15px !important;
+}
+
+.mapboxgl-ctrl-geocoder {
+    margin: auto !important;
+}
