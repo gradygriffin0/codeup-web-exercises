@@ -106,7 +106,8 @@ addGeocoderToMap(geocoder);
 
 function addGeocoderToMap(geocoder) {
     // appends geocoder with addControl built-in method
-    map.addControl(geocoder);
+    document.getElementById("geocodeHouse").appendChild(geocoder.onAdd(map))
+
 }
 
 addGeocoderEvent(geocoder);
