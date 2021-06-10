@@ -13,14 +13,16 @@ function getMap() {
         container: "map",
         center: [-98.44880829595778, 29.50121046110793],
         style: 'mapbox://styles/mapbox/streets-v11',
-        zoom: 11.5
+        zoom: 9
     })
 }
-
-setZoom();
+selectZoom();
+function selectZoom(){
+    $('#zoom').change(setZoom);
+}
 function setZoom(){
-    var zoom = $('#zoom').val()
-    console.log(zoom);
+    map.setZoom( $('#zoom').val());
+
 }
 
 // setMarker generates the marker, calling it to marker makes it so the marker is changeable
@@ -117,7 +119,7 @@ function addGeocoderEvent(geocoder) {
     })
 }
 
-console.log(map.center);
+console.log(map.zoom);
 // startPopup();
 // function startPopup(){
 //     new mapboxgl.Popup({ closeOnClick: false })

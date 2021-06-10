@@ -72,4 +72,5 @@ function addMapEvent(marker){
 function setPopup(textDetails){
     let popup = new mapboxgl.Popup().setHTML(`<p>${textDetails}</p>`).addTo(map);
     marker.setPopup(popup);
+    marker.togglePopup();
 }
