@@ -56,20 +56,9 @@ let restaurants = [
 //     // })
 // }
 
-// startPopup();
-// function startPopup(){
-//     var popup = new mapboxgl.Popup({ closeOnClick: false })
-//         .setLngLat(map.center)
-//         .setHTML('<h1>Click a marker to see my favorite restaurants</h1>')
-//         .addTo(map);
-// }
 
 
 // function to create new popup and append it to map and marker
-// setPopup("This is my favorite restaurant, J Alexander's", markerJs);
-// setPopup("This is my second favorite restaurant, B-Dubs", markerWings);
-// setPopup("This is my third favorite restaurant, Twins", markerTwins);
-
 setPopup(restaurants);
 function setPopup(arr) {
     arr.forEach(function (object) {
@@ -122,3 +111,12 @@ function addGeocoderEvent(geocoder) {
         console.log(e.result);
     })
 }
+
+console.log(map.center);
+// startPopup();
+// function startPopup(){
+//     new mapboxgl.Popup({ closeOnClick: false })
+//         .setLngLat(map.center)
+//         .setHTML('<h1>Click a marker to see my favorite restaurants</h1>')
+//         .addTo(map);
+// }
