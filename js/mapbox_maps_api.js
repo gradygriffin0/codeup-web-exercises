@@ -82,9 +82,10 @@ function addMapEvent(marker){
     map.on('click', function(e){
         console.log(e.lngLat);
         // marker.setLngLat(e.lngLat).addTo(map);
-        return e.lngLat;
+         weatherRequest(e.lngLat);
 
     })
+
 }
 
 
@@ -120,14 +121,23 @@ function addGeocoderEvent(geocoder) {
         console.log(e.result);
     })
 }
-weatherRequest(addMapEvent);
+
 function weatherRequest(lngLat){
+    let lat = lngLat.lat;
+    console.log(lat);
+    let lng = lngLat.lng;
+    console.log(lng);
     $.ajax({
-        url: "api.openweathermap.org/data/2.5/weather",
+        url: "https://api.openweathermap.org/data/2.5/weather",
         type: "GET",
         data: {
             APPID: OPEN_WEATHERMAP_TOKEN,
-
+            lat: lat,
+            lon: lng,
+            units: "imperial"
+        },
+        success: function(data){
+            console.log(data);
         }
     })
 }
