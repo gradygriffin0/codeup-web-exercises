@@ -1,7 +1,7 @@
 "use strict";
 
 // global variables for my api token, map object, and applying token to my map;
-const myToken = "pk.eyJ1IjoiZ3JhZG1hbiIsImEiOiJja3Bxejhvc3EwOGhtMm5xdjRkeXpndDFiIn0.PUaRuIJpcgSE8tI2yZptvA";
+const myToken = MAPBOX_TOKEN;
 var map;
 mapboxgl.accessToken = myToken;
 
@@ -77,14 +77,14 @@ function setPopup(arr) {
 }
 
 // adds click event to the map.
-// addMapEvent(marker);
-// function addMapEvent(marker){
-//     map.on('click', function(e){
-//
-//         marker.setLngLat(e.lngLat).addTo(map);
-//
-//     })
-// }
+addMapEvent();
+function addMapEvent(marker){
+    map.on('click', function(e){
+        console.log(e.lngLat);
+        // marker.setLngLat(e.lngLat).addTo(map);
+
+    })
+}
 
 
 // call setGeocoder to save the returned object to geocoder variable,
@@ -120,7 +120,8 @@ function addGeocoderEvent(geocoder) {
     })
 }
 
-console.log(map.zoom);
+function weatherRequest(lngLat)
+
 // startPopup();
 // function startPopup(){
 //     new mapboxgl.Popup({ closeOnClick: false })
