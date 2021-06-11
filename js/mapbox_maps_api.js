@@ -82,6 +82,7 @@ function addMapEvent(marker){
     map.on('click', function(e){
         console.log(e.lngLat);
         // marker.setLngLat(e.lngLat).addTo(map);
+        return e.lngLat;
 
     })
 }
@@ -119,8 +120,8 @@ function addGeocoderEvent(geocoder) {
         console.log(e.result);
     })
 }
-
-function weatherRequest(lngLat)
+weatherRequest(addMapEvent);
+function weatherRequest(lngLat){}
 
 // startPopup();
 // function startPopup(){
