@@ -121,7 +121,16 @@ function addGeocoderEvent(geocoder) {
     })
 }
 weatherRequest(addMapEvent);
-function weatherRequest(lngLat){}
+function weatherRequest(lngLat){
+    $.ajax({
+        url: "api.openweathermap.org/data/2.5/weather",
+        type: "GET",
+        data: {
+            APPID: OPEN_WEATHERMAP_TOKEN,
+
+        }
+    })
+}
 
 // startPopup();
 // function startPopup(){
