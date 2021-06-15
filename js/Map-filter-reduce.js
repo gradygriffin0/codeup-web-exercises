@@ -51,9 +51,17 @@ let longestEmail = emails.reduce((accumulator, current) => {
     : current;
 }, "")
 
+let nameString = users.reduce( (accumulator, current, index) => {
+   if (index === users.length -1 ){
+       return accumulator + current.name;
+   }
+    return  `${accumulator +current.name}, `
+}, "Your instructors are: ")
+
 console.log(atleastThree);
 console.log(emails);
 console.log(averageYears)
 console.log(longestEmail);
+console.log(nameString)
 
 
