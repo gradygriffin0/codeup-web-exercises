@@ -45,8 +45,15 @@ let averageYears = users.reduce((accumlator, current) => {
     return accumlator + current.yearsOfExperience;
 }, 0) / users.length
 
+let longestEmail = emails.reduce((accumulator, current) => {
+    return accumulator.length > current.length
+    ? accumulator
+    : current;
+}, "")
+
 console.log(atleastThree);
 console.log(emails);
 console.log(averageYears)
+console.log(longestEmail);
 
 
