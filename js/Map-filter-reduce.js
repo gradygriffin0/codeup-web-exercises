@@ -58,10 +58,21 @@ let nameString = users.reduce( (accumulator, current, index) => {
     return  `${accumulator +current.name}, `
 }, "Your instructors are: ")
 
-console.log(atleastThree);
-console.log(emails);
-console.log(averageYears)
-console.log(longestEmail);
-console.log(nameString)
+let uniqueLanguages = users.reduce( (accumulator, user, index) => {
+    let uniqueLang = user.languages.filter((lang)=>{
+        if(!accumulator.includes(lang)){
+            return lang;
+        }
+    })
+    accumulator.push(...uniqueLang);
+    return accumulator
+}, [])
+//
+// console.log(atleastThree);
+// console.log(emails);
+// console.log(averageYears)
+// console.log(longestEmail);
+// console.log(nameString)
+console.log(uniqueLanguages)
 
 
