@@ -35,3 +35,7 @@ const users = [
         yearsOfExperience: 9
     }
 ];
+
+let atleastThree = users.filter(function(user){
+    return languages.length >= 3
+})
