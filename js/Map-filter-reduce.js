@@ -37,5 +37,16 @@ const users = [
 ];
 
 let atleastThree = users.filter(function(user){
-    return languages.length >= 3
+    return user.languages.length >= 3
 })
+let emails = users.map(user => user.email)
+
+let averageYears = users.reduce((accumlator, current) => {
+    return accumlator + current.yearsOfExperience;
+}, 0) / users.length
+
+console.log(atleastThree);
+console.log(emails);
+console.log(averageYears)
+
+
