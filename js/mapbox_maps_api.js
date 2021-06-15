@@ -138,6 +138,7 @@ function weatherRequest(lngLat){
         },
         success: function(data){
             console.log(data);
+            return data
         }
     })
 }
