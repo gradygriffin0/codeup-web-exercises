@@ -30,7 +30,7 @@ fetch('https://jsonplaceholder.typicode.com/posts') // make a request - GET
         document.getElementById("blog").innerHTML = `<h1>${data[10].title}</h1> <p>${data[10].body}</p>`
         // $.ajax("#blog").html(`<h1>${data.title}</h1> <p>${data.body}</p>`)
     }) // we have the data in json format, now we can manipulate it
-    // .catch(error => {
-    //     console.log(error);
-    //     console.error(error);
-    // });
+    .catch(error => {
+        console.log(error);
+        console.error(error);
+    });
