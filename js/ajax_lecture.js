@@ -91,15 +91,15 @@
 // TODO: make a POST request to the '/posts' endpoint, make sure to include any data required for that post to be made successfully
 
 // console.log($.ajax("https://jsonplaceholder.typicode.com/comments"));
-// console.log($.ajax("https://jsonplaceholder.typicode.com/posts", {
-//     type: "POST",
-//     data: {
-//         "userId": 11,
-//         "id": 101,
-//         "title": "GG",
-//         "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
-//     }
-// }));
+console.log($.ajax("https://jsonplaceholder.typicode.com/posts", {
+    type: "POST",
+    data: {
+        "userId": 11,
+        "id": 101,
+        "title": "GG",
+        "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+    }
+}));
 
 // console.log($.ajax("https://jsonplaceholder.typicode.com/posts"));
 
@@ -120,14 +120,14 @@
 
 // array data
 
-console.log($.ajax("https://jsonplaceholder.typicode.com/comments", {
-
-}).done(function(data, status){
-    for (let i = 0; i < data.length; i++){
-        if (data[i].postId === 1){
-            console.log(data[i]);
-        }
-    }
-    console.log(status);
-}));
+// console.log($.ajax("https://jsonplaceholder.typicode.com/comments", {
+//
+// }).done(function(data, status){
+//     for (let i = 0; i < data.length; i++){
+//         if (data[i].postId === 1){
+//             console.log(data[i]);
+//         }
+//     }
+//     console.log(status);
+// }));
 
